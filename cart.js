@@ -141,7 +141,7 @@ function setupCartMenu() {
                     <span>Subtotal</span>
                     <span id="cartTotal"></span>
                 </div>
-                <a href="checkout.html" class="btn btn-petrol w-100">Checkout</a>
+                <a href="Checkout.html" class="btn btn-petrol w-100">Checkout</a>
             </div>
         </div>
         <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastArea"></div>`);
@@ -225,7 +225,7 @@ function setupCartMenu() {
         });
 
         if (existing) {
-            existing.qty = existing.qty + 1; // already in cart: add 1 more
+            existing.qty = existing.qty + 1;
         } else {
             cart.push(newItem);
         }
@@ -248,7 +248,7 @@ function setupCartMenu() {
         if (buyButton) {
             // Buy Now: checkout with only this product
             saveItems(sessionStorage, BUY_NOW_KEY, [product.item]);
-            location.href = 'Checkout.html?mode=buynow';
+            location.href = './Checkout.html?mode=buynow';
         } else {
             flyToCart(product.imageElement, function () {
                 addToCart(product.item);
@@ -256,7 +256,6 @@ function setupCartMenu() {
         }
     });
 
-    // Click the cart logo -> open the cart menu
     cartButton.addEventListener('click', function (event) {
         event.preventDefault();
         cartMenu.show();
