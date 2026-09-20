@@ -248,7 +248,7 @@ function setupCartMenu() {
         if (buyButton) {
             // Buy Now: checkout with only this product
             saveItems(sessionStorage, BUY_NOW_KEY, [product.item]);
-            location.href = 'checkout.html?mode=buynow';
+            location.href = 'Checkout.html?mode=buynow';
         } else {
             flyToCart(product.imageElement, function () {
                 addToCart(product.item);
