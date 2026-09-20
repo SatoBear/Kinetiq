@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../Images/kinitiqLogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetiq | Men's Sports Gear & Apparel</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared Global Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-dark top-navbar py-3">
+            <div class="container-fluid px-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between w-100 navbar-row">
+
+                    <!-- Brand / Logo (Left) -->
+                    <a class="navbar-brand fw-bold fs-3" href="kinetiq.html">
+                        <img src="./Images/kinitiqLogo.png" alt="Kinetiq home" class="img-fluid">
+                    </a>
+
+                    <!-- Search Bar (Centered & Flexible) -->
+                    <div class="search-bar-container order-3 order-lg-2 flex-grow-1 mx-auto my-2 my-lg-0">
+                        <div class="input-group search-wrapper overflow-hidden">
+                            <span class="input-group-text bg-transparent border-0 ps-3">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control py-2 ps-1 pe-3 bg-transparent border-0 shadow-none"
+                                placeholder="Search men's shoes, tops, jackets..." aria-label="Search">
+                        </div>
+                    </div>
+
+                    <!-- My Cart (Right) -->
+                    <div class="d-flex align-items-center order-2 order-lg-3">
+                        <a href="#" class="icon-btn position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span>My Cart</span>
+                            <span class="cart-count">2</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Secondary Navbar with full width spacing -->
+        <div class="secondary-nav bg-white border-bottom shadow-sm">
+            <div class="container-fluid px-4">
+                <ul
+                    class="nav align-items-center justify-content-between mb-0 list-unstyled w-100 flex-nowrap overflow-auto">
+
+                    <!-- 1. All Sports -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold px-2" href="all-sports.html"
+                            id="allSportsMenuLink">
+                            All Sports
+                        </a>
+                        <div class="dropdown-menu sports-mega-menu p-4 shadow-lg border-0">
+                            <div class="row g-4">
+                                <!-- Column 1 -->
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Outdoor Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="all-sports.html#hiking"
+                                                class="text-decoration-none text-secondary">Hiking and Trekking</a></li>
+                                        <li class="mb-2"><a href="all-sports.html#camping"
+                                                class="text-decoration-none text-secondary">Camping</a></li>
+                                        <li class="mb-2"><a href="all-sports.html#winter"
+                                                class="text-decoration-none text-secondary">Winter Sports</a></li>
+                                        <li class="mb-2"><a href="all-sports.html#cycling"
+                                                class="text-decoration-none text-secondary">Cycling</a></li>
+                                        <li class="mb-0"><a href="all-sports.html#skating"
+                                                class="text-decoration-none text-secondary">Skating</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Racket Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="all-sports.html#rackets"
+                                                class="text-decoration-none text-secondary">Tennis</a></li>
+                                        <li class="mb-2"><a href="all-sports.html#rackets"
+                                                class="text-decoration-none text-secondary">Badminton</a></li>
+                                        <li class="mb-2"><a href="all-sports.html#rackets"
+                                                class="text-decoration-none text-secondary">Pickle Ball</a></li>
+                                        <li class="mb-0"><a href="all-sports.html#rackets"
+                                                class="text-decoration-none text-secondary">Table Tennis</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 3 -->
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Swimming Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="all-sports.html#swimming"
+                                                class="text-decoration-none text-secondary">Swimwear</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 2. Men -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2" href="men.html" id="menMenuLink">
+                            Men
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Apparel &amp; Shoes</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="javascript:void(0)" onclick="filterCategory('shoes')"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Shoes</a></li>
+                                <li class="mb-2"><a href="javascript:void(0)" onclick="filterCategory('tops')"
+                                        class="text-decoration-none text-secondary text-nowrap">T-Shirts &amp; Tops</a>
+                                </li>
+                                <li class="mb-2"><a href="javascript:void(0)" onclick="filterCategory('bottoms')"
+                                        class="text-decoration-none text-secondary text-nowrap">Shorts &amp; Bottoms</a>
+                                </li>
+                                <li class="mb-0"><a href="javascript:void(0)" onclick="filterCategory('jackets')"
+                                        class="text-decoration-none text-secondary text-nowrap">Jackets &amp;
+                                        Windbreakers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. Women -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2" href="women.html"
+                            id="womenMenuLink">
+                            Women
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Clothing</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="women.html?category=bras"
+                                        class="text-decoration-none text-secondary text-nowrap">Sports Bras</a></li>
+                                <li class="mb-2"><a href="women.html?category=leggings"
+                                        class="text-decoration-none text-secondary text-nowrap">Leggings</a></li>
+                                <li class="mb-0"><a href="women.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">Tops</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. Kids and Babies (Dropdown) -->
+                    <!-- 4. Kids and Babies -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="shop.html"
+                            id="nav-kids">
+                            Kids and Babies
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Junior Activewear</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="shop.html?filter=footwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Kids Running Shoes</a>
+                                </li>
+                                <li class="mb-2"><a href="shop.html?filter=apparel"
+                                        class="text-decoration-none text-secondary text-nowrap">Tees &amp; Active
+                                        Shorts</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=swim"
+                                        class="text-decoration-none text-secondary text-nowrap">Swimsuits &amp;
+                                        Goggles</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=protective"
+                                        class="text-decoration-none text-secondary text-nowrap">Helmets &amp; Protective
+                                        Pads</a></li>
+                                <li class="mb-0"><a href="shop.html"
+                                        class="text-decoration-none text-secondary text-nowrap">Junior Backpacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 5. Sport Accessories (Active State) -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="accessories.html" id="nav-accessories">
+                            Sport Accessories
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Hardware &amp; Extras</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#filter-hydration"
+                                        onclick="filterCategory('hydration', document.getElementById('pill-hydration'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Water Bottles &amp;
+                                        Flasks</a></li>
+                                <li class="mb-2"><a href="#filter-recovery"
+                                        onclick="filterCategory('recovery', document.getElementById('pill-recovery'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Massage &amp; Foam
+                                        Rollers</a></li>
+                                <li class="mb-2"><a href="#filter-wraps"
+                                        onclick="filterCategory('wraps', document.getElementById('pill-wraps'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Compression Sleeves</a>
+                                </li>
+                                <li class="mb-2"><a href="#filter-wraps"
+                                        onclick="filterCategory('wraps', document.getElementById('pill-wraps'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Athletic Tape</a></li>
+                                <li class="mb-0"><a href="#filter-bags"
+                                        onclick="filterCategory('bags', document.getElementById('pill-bags'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Belts &amp;
+                                        Pouches</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 6. Travel -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="travel.html"
+                            id="nav-travel">
+                            Travel
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Luggage &amp; Packs</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="travel.html?filter=duffel"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Duffel
+                                        Bags</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=backpacks"
+                                        class="text-decoration-none text-secondary text-nowrap">Hiking Daypacks</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=organizers"
+                                        class="text-decoration-none text-secondary text-nowrap">Travel Toiletry Kits</a>
+                                </li>
+                                <li class="mb-0"><a href="travel.html?filter=packs"
+                                        class="text-decoration-none text-secondary text-nowrap">Roll-Top Dry Sacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 7. Sports Trend -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="trends.html"
+                            id="nav-trends">
+                            Sports Trend
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Street &amp; Seasonal</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="trends.html?filter=sneakers"
+                                        class="text-decoration-none text-secondary text-nowrap">Court Retro Sneakers</a>
+                                </li>
+                                <li class="mb-2"><a href="trends.html?filter=outerwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Boxy Heavyweight
+                                        Hoodies</a></li>
+                                <li class="mb-2"><a href="trends.html?filter=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Cargo Utility Track
+                                        Pants</a></li>
+                                <li class="mb-0"><a href="trends.html?filter=headwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Bucket
+                                        Hats</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 8. Best Deals -->
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-danger fw-bold px-2 text-nowrap" href="kinetiq.html#flash-deals">Best
+                            Deals</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Men's Department Banner -->
+    <section class="py-4"
+        style="background: linear-gradient(135deg, var(--petrol-deep) 0%, #082128 100%); color: #ffffff;">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center py-2">
+                <div class="col-md-8">
+                    <span class="badge bg-warning text-dark fw-bold mb-2">MEN'S PERFORMANCE</span>
+                    <h2 class="fw-bolder mb-2 text-uppercase">Men's Sporting Gear &amp; Apparel</h2>
+                    <p class="text-light small mb-0" style="max-width: 600px; opacity: 0.85;">
+                        Engineered for endurance, running, gym workouts, and outdoor hiking. Choose your sport, filter
+                        by gear, and gear up instantly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKETPLACE SECTION WITH INTERACTIVE FILTER BAR -->
+    <main class="marketplace-section py-4" id="marketplace">
+        <div class="container-fluid px-4">
+
+            <!-- FILTER BAR (Like a sub-nav directly on top of products) -->
+            <div class="filter-bar-container mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+
+                    <!-- Filter Pill Buttons -->
+                    <div class="d-flex align-items-center gap-2 overflow-x-auto" style="scrollbar-width: none;">
+                        <button class="filter-pill-btn active" onclick="filterCategory('all', this)">All Men</button>
+                        <button class="filter-pill-btn" onclick="filterCategory('shoes', this)"><i
+                                class="bi bi-tag me-1"></i> Running Shoes</button>
+                        <button class="filter-pill-btn" onclick="filterCategory('tops', this)"><i
+                                class="bi bi-tag me-1"></i> T-Shirts &amp; Tops</button>
+                        <button class="filter-pill-btn" onclick="filterCategory('bottoms', this)"><i
+                                class="bi bi-tag me-1"></i> Shorts &amp; Bottoms</button>
+                        <button class="filter-pill-btn" onclick="filterCategory('jackets', this)"><i
+                                class="bi bi-tag me-1"></i> Jackets &amp; Windbreakers</button>
+                        <button class="filter-pill-btn" onclick="filterCategory('accessories', this)"><i
+                                class="bi bi-tag me-1"></i> Accessories</button>
+                    </div>
+
+                    <!-- Sort Dropdown -->
+                    <button id="sortBtn" class="btn btn-sm btn-outline-secondary dropdown-toggle fw-semibold"
+                        type="button" data-bs-toggle="dropdown">Sort by: Popular</button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item active" href="#" data-sort="popular">Popular</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="latest">Latest</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="low">Price: Low to High</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="high">Price: High to Low</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID (Shopee / Lazada Layout) -->
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3" id="productGrid">
+
+                <!-- 1. SHOES -->
+                <div class="col product-item" data-category="shoes">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <span class="market-badge-discount">-30%</span>
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
+                                alt="Kinetiq Speed Pro Runners" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">Men's Speed Pro Marathon Shoes</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                                    <span>1.4k sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱2,190</span>
+                                    <span class="market-original-price">₱3,100</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. TOPS -->
+                <div class="col product-item" data-category="tops">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <span class="market-badge-discount">-15%</span>
+                            <img src="https://shopsportiff.com/cdn/shop/files/sportiff1425.webp?v=1759914373&width=3840"
+                                alt="Men's Hydrovent Tee" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">HydroVent Seamless Breathable Gym Tee</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                                    <span>980 sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱590</span>
+                                    <span class="market-original-price">₱700</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. BOTTOMS -->
+                <div class="col product-item" data-category="bottoms">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <span class="market-badge-discount">-25%</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP_uF8XDfjeSpZshpHPjM-D0GtmATpKi_6Mlscxpb8Pg&s=10"
+                                alt="Enduro 2-in-1 Shorts" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">Enduro 7" Liner 2-in-1 Running Shorts</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                                    <span>650 sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱790</span>
+                                    <span class="market-original-price">₱1,050</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. JACKETS -->
+                <div class="col product-item" data-category="jackets">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcekxlruCXYzzlemgHECDdgBVu0isePTadjdWwmnkziA&s=10"
+                                alt="AlpineShield Windbreaker" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">AlpineShield Packable Trail Windbreaker</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                                    <span>320 sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱2,290</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. BOTTOMS (TIGHTS) -->
+                <div class="col product-item" data-category="bottoms">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <span class="market-badge-discount">-20%</span>
+                            <img src="https://www.compressport.com/inter/39355-home_default/recovery-full-tights-m-black.jpghttps://www.compressport.com/inter/39355-home_default/recovery-full-tights-m-black.jpg"
+                                alt="CoreSupport Compression Tights" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">CoreSupport Full Compression Recovery Leggings</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+                                    <span>540 sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱950</span>
+                                    <span class="market-original-price">₱1,200</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. ACCESSORIES -->
+                <div class="col product-item" data-category="accessories">
+                    <div class="market-card">
+                        <div class="market-img-box">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+                                alt="Apex GPS Watch" loading="lazy">
+                        </div>
+                        <div class="market-card-body">
+                            <div>
+                                <h5 class="market-product-title">Kinetiq Apex 5 GPS Multisport Watch</h5>
+                                <div class="market-meta-row">
+                                    <span><i class="bi bi-star-fill text-warning"></i> 5.0</span>
+                                    <span>88 sold</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="market-price-row">
+                                    <span class="market-current-price">₱3,990</span>
+                                </div>
+                                <div class="market-actions">
+                                    <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                    <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                            class="bi bi-cart3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- See More / Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-dark px-5 py-2 fw-bold" type="button">
+                    Load More Men's Items <i class="bi bi-chevron-down ms-1"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Trust Badges Strip -->
+    <section class="trust-badges-section py-5">
+        <div class="container-fluid px-4">
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                <div class="col">
+                    <div class="trust-badge-card">
+                        <div class="trust-icon-box"><i class="bi bi-shield-check"></i></div>
+                        <div>
+                            <h4 class="trust-title">2-Year Warranty</h4>
+                            <p class="trust-desc">Guaranteed durability and coverage on all technical gear and sports
+                                hardware.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="trust-badge-card">
+                        <div class="trust-icon-box"><i class="bi bi-shop"></i></div>
+                        <div>
+                            <h4 class="trust-title">Free Click &amp; Collect</h4>
+                            <p class="trust-desc">Pick up your order in as fast as 2 hours at any Kinetiq partner hub.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="trust-badge-card">
+                        <div class="trust-icon-box"><i class="bi bi-arrow-repeat"></i></div>
+                        <div>
+                            <h4 class="trust-title">30-Day Easy Returns</h4>
+                            <p class="trust-desc">Not the right fit? Exchange or return items easily with no extra fees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="trust-badge-card">
+                        <div class="trust-icon-box"><i class="bi bi-tree"></i></div>
+                        <div>
+                            <h4 class="trust-title">Eco-Design Certified</h4>
+                            <p class="trust-desc">Engineered responsibly using recycled materials and low-impact dyeing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer pt-5">
+        <div class="container-fluid px-4 pb-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3"><img src="./Images/kinitiqLogo.png" alt="kinetiq"
+                            class="img-fluid">
+                    </h5>
+                    <p class="small text-muted" style="max-width: 320px;">
+                        Technical equipment and apparel designed for accessibility, high performance, and lifetime
+                        sports journeys.
+                    </p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Departments</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="all-sports.html">All Sports</a></li>
+                        <li class="mb-2"><a href="men.html">Men's Apparel</a></li>
+                        <li class="mb-2"><a href="women.html">Women's Gear</a></li>
+                        <li class="mb-2"><a href="#">Footwear</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Track Order</a></li>
+                        <li class="mb-2"><a href="#">Warranty &amp; Repairs</a></li>
+                        <li class="mb-2"><a href="#">Returns Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6>Kinetiq Club</h6>
+                    <p class="small text-muted">Subscribe for exclusive member pricing, and fresh drops.</p>
+                    <div class="input-group newsletter-form">
+                        <input type="email" class="form-control form-control-sm px-3" placeholder="Enter your email">
+                        <button class="btn btn-sm px-3" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-secondary border-opacity-25">
+            <div class="container-fluid px-4 d-flex justify-content-between align-items-center small text-muted">
+                <span>&copy; 2026 Kinetiq Sports Retail Inc. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+
+    <!-- Filter Script -->
+    <script>
+        function filterCategory(category, clickedBtn) {
+            // Update active pill button style if clicked from filter bar
+            if (clickedBtn) {
+                document.querySelectorAll('.filter-pill-btn').forEach(btn => btn.classList.remove('active'));
+                clickedBtn.classList.add('active');
+            }
+
+            // Show or hide items in the grid
+            const items = document.querySelectorAll('.product-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('category');
+            if (cat) {
+                // Find matching pill button and activate it
+                const targetBtn = Array.from(document.querySelectorAll('.filter-pill-btn'))
+                    .find(btn => btn.getAttribute('onclick')?.includes(cat));
+                filterCategory(cat, targetBtn);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../Images/kinitiqLogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Kinetiq</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-dark top-navbar py-3">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Images/kinitiqLogo.png" alt="Kinetiq home" class="img-fluid">
+                </a>
+                <a href="Kinetiq.html" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                    <i class="bi bi-arrow-left me-1"></i>Back to shop
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid px-4 py-4">
+        <h2 class="fw-bold mb-4" style="color: var(--petrol-deep);">Checkout</h2>
+
+        <!-- Shown when there is nothing to buy -->
+        <div class="card border-0 shadow-sm text-center py-5 d-none" id="emptyMessage">
+            <div class="card-body">
+                <i class="bi bi-bag-x display-4 text-muted"></i>
+                <h5 class="fw-bold mt-3">Nothing to check out</h5>
+                <a href="Kinetiq.html" class="btn btn-petrol px-4 mt-2">Continue shopping</a>
+            </div>
+        </div>
+
+        <div class="row g-4" id="checkoutLayout">
+
+            <!-- LEFT: customer details + payment -->
+            <div class="col-lg-7">
+                <form id="checkoutForm" class="needs-validation" novalidate>
+
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Contact &amp; delivery</h5>
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="fullName" placeholder="Full name" required>
+                                        <label for="fullName">Full name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="mobile" placeholder="Mobile"
+                                            pattern="^(09|\+639)\d{9}$" required>
+                                        <label for="mobile">Mobile (09XXXXXXXXX)</label>
+                                        <div class="invalid-feedback">Enter a valid PH mobile number.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Email"
+                                            required>
+                                        <label for="email">Email address</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="street" placeholder="Street" required>
+                                        <label for="street">House no., street, barangay</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="city" placeholder="City" required>
+                                        <label for="city">City / Province</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="zip" placeholder="Postal code" pattern="^\d{4}$"
+                                            required>
+                                        <label for="zip">Postal code</label>
+                                        <div class="invalid-feedback">4 digits.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Payment</h5>
+                            <div class="list-group">
+                                <label class="list-group-item d-flex gap-3">
+                                    <input class="form-check-input flex-shrink-0" type="radio" name="payment" checked>
+                                    Cash on delivery
+                                </label>
+                                <label class="list-group-item d-flex gap-3">
+                                    <input class="form-check-input flex-shrink-0" type="radio" name="payment">
+                                    GCash
+                                </label>
+                                <label class="list-group-item d-flex gap-3">
+                                    <input class="form-check-input flex-shrink-0" type="radio" name="payment">
+                                    Maya
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- RIGHT: order summary -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm sticky-lg-top" style="top: 100px;">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">Order summary</h5>
+
+                        <ul class="list-group list-group-flush mb-3" id="orderList"></ul>
+
+                        <div class="d-flex justify-content-between small text-muted mb-1">
+                            <span>Subtotal</span>
+                            <span id="subtotal"></span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>Shipping</span>
+                            <span id="shipping"></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                            <span>Total</span>
+                            <span id="total" style="color: var(--petrol-deep);"></span>
+                        </div>
+
+                        <!-- form="checkoutForm" connects this button to the form on the left -->
+                        <button type="submit" form="checkoutForm" class="btn btn-petrol w-100 py-2">Place order</button>
+                        <p class="small text-muted text-center mt-2 mb-0">Free shipping on orders over ₱2,000</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modal fade" id="successModal" tabindex="-1" data-bs-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <h4 class="fw-bold">Order placed</h4>
+                <p class="text-muted">Order number <strong id="orderNumber"></strong></p>
+
+                <div class="rp-printer" id="rpPrinter">
+                    <h6 class="rp-name">KINETIQ PRINT</h6>
+                    <div class="rp-signal"></div>
+                    <div class="rp-mouth">
+                        <div class="rp-paper" id="rpPaper">
+                            <h5 class="fw-bold text-center mt-3 mb-0">KINETIQ</h5>
+                            <p class="text-center mb-1" id="rpDate" style="font-size:.7rem"></p>
+                            <p class="mb-0">Order #<span id="rpOrder"></span></p>
+                            <p class="mb-1">Name: <span id="rpName"></span></p>
+                            <p class="mb-1">Email: <span id="rpEmail"></span></p>
+                            <div class="rp-dash"></div>
+                            <div id="rpItems"></div>
+                            <div class="rp-dash"></div>
+                            <p class="rp-line"><span>Subtotal</span><span id="rpSubtotal"></span></p>
+                            <p class="rp-line"><span>Shipping</span><span id="rpShipping"></span></p>
+                            <p class="rp-line fw-bold"><span>TOTAL</span><span id="rpTotal"></span></p>
+                            <p class="text-center mt-2 mb-0" style="font-size:.7rem">Thank you for shopping!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="printBtn" class="btn btn-petrol w-100 mb-2">Print receipt</button>
+                <a href="Kinetiq.html" class="btn btn-outline-secondary w-100">Continue shopping</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    <script>
+        // "Buy Now" sends 1 product (sessionStorage). Normal checkout uses the whole cart.
+        const isBuyNow = new URLSearchParams(location.search).get('mode') === 'buynow';
+        const storage = isBuyNow ? sessionStorage : localStorage;
+        const storageKey = isBuyNow ? BUY_NOW_KEY : CART_KEY;
+        const orderItems = loadItems(storage, storageKey);
+
+        // Show the products and the totals
+        function showOrder() {
+            saveItems(storage, storageKey, orderItems);
+
+            const subtotal = getTotal(orderItems);
+            let shipping = 120;
+            if (subtotal >= 2000) {
+                shipping = 0; // free shipping
+            }
+
+            byId('orderList').innerHTML = orderItems.map(makeItemRow).join('');
+            byId('subtotal').textContent = formatPeso(subtotal);
+            byId('shipping').textContent = shipping === 0 ? 'FREE' : formatPeso(shipping);
+            byId('total').textContent = formatPeso(subtotal + shipping);
+
+            const isEmpty = orderItems.length === 0;
+            byId('emptyMessage').classList.toggle('d-none', !isEmpty);
+            byId('checkoutLayout').classList.toggle('d-none', isEmpty);
+        }
+
+        // Click  -  +  trash  in the summary
+        byId('orderList').addEventListener('click', function (event) {
+            if (updateItemFromButton(event, orderItems)) {
+                showOrder();
+            }
+        });
+
+        // Place order
+        byId('checkoutForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!event.target.checkValidity()) {
+                event.target.classList.add('was-validated');
+                return;
+            }
+
+            byId('orderNumber').textContent = 'KQ-' + Math.floor(100000 + Math.random() * 900000);
+
+            const orderNo = 'KQ-' + Math.floor(100000 + Math.random() * 900000);
+            byId('orderNumber').textContent = orderNo;
+
+            byId('rpOrder').textContent = orderNo;
+            byId('rpDate').textContent = new Date().toLocaleString('en-PH');
+            byId('rpName').textContent = byId('fullName').value;
+            byId('rpEmail').textContent = byId('email').value;
+            byId('rpItems').innerHTML = orderItems.map(function (i) {
+                return `<p class="rp-line"><span>${i.qty} x ${i.title}</span><span>${formatPeso(i.price * i.qty)}</span></p>`;
+            }).join('');
+            byId('rpSubtotal').textContent = byId('subtotal').textContent;
+            byId('rpShipping').textContent = byId('shipping').textContent;
+            byId('rpTotal').textContent = byId('total').textContent;
+
+            storage.removeItem(storageKey);
+
+
+            byId('rpPrinter').classList.remove('rp-show');
+            byId('rpPrinter').style.height = '';
+            byId('printBtn').disabled = false;
+            byId('printBtn').textContent = 'Print receipt';
+            new bootstrap.Modal(byId('successModal')).show();
+        });
+        byId('printBtn').addEventListener('click', function () {
+            byId('rpPrinter').style.height = (byId('rpPaper').offsetHeight + 90) + 'px';
+            byId('rpPrinter').classList.add('rp-show');
+            this.disabled = true;
+            this.textContent = 'Printing...';
+
+            setTimeout(() => {
+                window.print();
+                this.disabled = false;
+                this.textContent = 'Print receipt';
+            }, 3000);
+        });
+
+
+
+
+        showOrder();
+    </script>
+</body>
+
+</html>

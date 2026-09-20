@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../Images/kinitiqLogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids &amp; Babies | Kinetiq</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Top Sticky Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-dark top-navbar py-3">
+            <div class="container-fluid px-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between w-100 navbar-row">
+
+                    <a class="navbar-brand fw-bold fs-3" href="kinetiq.html">
+                        <img src="./Images/kinitiqLogo.png" alt="Kinetiq home" class="img-fluid">
+                    </a>
+
+                    <div class="search-bar-container order-3 order-lg-2 flex-grow-1 mx-auto my-2 my-lg-0">
+                        <div class="input-group search-wrapper overflow-hidden">
+                            <span class="input-group-text bg-transparent border-0 ps-3 pe-auto">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control py-2 ps-1 pe-3 bg-transparent border-0"
+                                placeholder="Search activewear, shoes, bags, accessories..." aria-label="Search">
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center order-2 order-lg-3">
+                        <a href="#" class="icon-btn position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span>My Cart</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Secondary Navbar -->
+        <div class="secondary-nav bg-white border-bottom shadow-sm">
+            <div class="container-fluid px-4">
+                <ul class="nav align-items-center justify-content-between mb-0 list-unstyled w-100 flex-nowrap">
+
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-dark fw-semibold px-2 text-nowrap" href="all-sports.html">All Sports</a>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="men.html">Men</a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Apparel &amp; shoes</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="men.html?category=shoes"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Shoes</a></li>
+                                <li class="mb-2"><a href="men.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">T-Shirts &amp; Tops</a>
+                                </li>
+                                <li class="mb-2"><a href="men.html?category=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Shorts &amp; Bottoms</a>
+                                </li>
+                                <li class="mb-0"><a href="men.html?category=jackets"
+                                        class="text-decoration-none text-secondary text-nowrap">Jackets &amp;
+                                        Windbreakers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="women.html">Women</a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Clothing</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="women.html?category=bras"
+                                        class="text-decoration-none text-secondary text-nowrap">Sports Bras</a></li>
+                                <li class="mb-2"><a href="women.html?category=leggings"
+                                        class="text-decoration-none text-secondary text-nowrap">Leggings</a></li>
+                                <li class="mb-0"><a href="women.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">Tops</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap active-dept"
+                            href="shop.html">
+                            Kids and Babies
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Junior activewear</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="shop.html?filter=footwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Kids Running Shoes</a>
+                                </li>
+                                <li class="mb-2"><a href="shop.html?filter=top%20and%20shorts"
+                                        class="text-decoration-none text-secondary text-nowrap">Tees &amp; Active
+                                        Shorts</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=swim%20and%20play"
+                                        class="text-decoration-none text-secondary text-nowrap">Swimsuits &amp;
+                                        Goggles</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=protective%20gear"
+                                        class="text-decoration-none text-secondary text-nowrap">Helmets &amp; Protective
+                                        Pads</a></li>
+                                <li class="mb-0"><a href="shop.html?filter=backpack"
+                                        class="text-decoration-none text-secondary text-nowrap">Junior Backpacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="accessories.html">
+                            Sport Accessories
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Hardware &amp; extras</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="accessories.html?filter=hydration"
+                                        class="text-decoration-none text-secondary text-nowrap">Water Bottles &amp;
+                                        Flasks</a></li>
+                                <li class="mb-2"><a href="accessories.html?filter=recovery"
+                                        class="text-decoration-none text-secondary text-nowrap">Massage &amp; Foam
+                                        Rollers</a></li>
+                                <li class="mb-2"><a href="accessories.html?filter=support"
+                                        class="text-decoration-none text-secondary text-nowrap">Compression Sleeves</a>
+                                </li>
+                                <li class="mb-0"><a href="accessories.html?filter=hardware"
+                                        class="text-decoration-none text-secondary text-nowrap">Athletic Tape</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="travel.html">
+                            Travel
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Luggage &amp; packs</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="travel.html?filter=duffels"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Duffel
+                                        Bags</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=backpacks"
+                                        class="text-decoration-none text-secondary text-nowrap">Hiking Daypacks</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=organizers"
+                                        class="text-decoration-none text-secondary text-nowrap">Travel Toiletry Kits</a>
+                                </li>
+                                <li class="mb-0"><a href="travel.html?filter=waterproof"
+                                        class="text-decoration-none text-secondary text-nowrap">Roll-Top Dry Sacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="trends.html">
+                            Sports Trend
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Street &amp; seasonal</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="trends.html?filter=sneakers"
+                                        class="text-decoration-none text-secondary text-nowrap">Court Retro Sneakers</a>
+                                </li>
+                                <li class="mb-2"><a href="trends.html?filter=hoodies"
+                                        class="text-decoration-none text-secondary text-nowrap">Boxy Heavyweight
+                                        Hoodies</a></li>
+                                <li class="mb-2"><a href="trends.html?filter=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Cargo Utility Track
+                                        Pants</a></li>
+                                <li class="mb-0"><a href="trends.html?filter=caps"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Bucket
+                                        Hats</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-danger fw-bold px-2 text-nowrap" href="kinetiq.html#flash-deals">Best
+                            Deals</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="pane-kids">
+
+        <!-- Hero Banner -->
+        <section class="py-4"
+            style="background: linear-gradient(135deg, #0b252b 0%, var(--petrol-deep) 100%); color: #ffffff;">
+            <div class="container-fluid px-4">
+                <div class="col-md-8 py-2">
+                    <span class="badge bg-warning text-dark fw-bold mb-2">Junior activewear</span>
+                    <h1 class="fw-bolder mb-2" style="letter-spacing: -0.5px;">Kids &amp; Babies</h1>
+                    <p class="text-light small mb-0" style="max-width: 600px; opacity: 0.85;">
+                        Durable activewear, protective sets, and junior equipment made for playtime and training.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Control Card -->
+        <section class="container-fluid px-4 my-4">
+            <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+
+                    <div class="d-flex align-items-center gap-2 overflow-x-auto flex-nowrap py-1"
+                        style="scrollbar-width: none;">
+                        <button class="filter-pill-btn active text-nowrap" data-filter="all"
+                            onclick="filterCategory('all', this)">All Kids</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="footwear"
+                            onclick="filterCategory('footwear', this)"><i class="bi bi-tag me-1"></i> Footwear</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="top and shorts"
+                            onclick="filterCategory('top and shorts', this)"><i class="bi bi-tag me-1"></i> Tops &amp;
+                            Shorts</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="swim and play"
+                            onclick="filterCategory('swim and play', this)"><i class="bi bi-tag me-1"></i> Swim &amp;
+                            Play</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="protective gear"
+                            onclick="filterCategory('protective gear', this)"><i class="bi bi-tag me-1"></i> Protective
+                            Gear</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="backpack"
+                            onclick="filterCategory('backpack', this)"><i class="bi bi-tag me-1"></i> Backpack</button>
+                        <button class="filter-pill-btn text-nowrap" data-filter="toy"
+                            onclick="filterCategory('toy', this)"><i class="bi bi-tag me-1"></i> Toys</button>
+                    </div>
+
+                    <button id="sortBtn" class="btn btn-sm btn-outline-secondary dropdown-toggle fw-semibold"
+                        type="button" data-bs-toggle="dropdown">Sort by: Popular</button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item active" href="#" data-sort="popular">Popular</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="latest">Latest</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="low">Price: Low to High</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="high">Price: High to Low</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <main class="container-fluid px-4 pb-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3" id="productGrid">
+
+                <!-- Junior Grip Court Sneakers -->
+                <div class="col product-card-item" data-category="footwear">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-25%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://images.unsplash.com/photo-1715693754047-4c0b56576495?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-100 h-100 object-fit-cover" alt="Junior Grip Court Sneakers"
+                                    onerror="swapProductImage(this, 'sneakers,kids')">
+                            </div>
+                            <h5 class="market-product-title">Junior Grip Court Sneakers</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                                <span>&bull;</span>
+                                <span>2.4k sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;1,650</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;2,200</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth Breathable Active Tee -->
+                <div class="col product-card-item" data-category="top and shorts">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-30%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://images.unsplash.com/photo-1693443687750-611ad77f3aba?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8WW91dGglMjBCcmVhdGhhYmxlJTIwQWN0aXZlJTIwVGVlfGVufDB8fDB8fHww"
+                                    class="w-100 h-100 object-fit-cover" alt="Youth Breathable Active Tee"
+                                    onerror="swapProductImage(this, 'kids,tshirt,sport')">
+                            </div>
+                            <h5 class="market-product-title">Youth Breathable Active Tee</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                                <span>&bull;</span>
+                                <span>3.1k sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;490</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;700</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kids Anti-Fog Mirrored Goggles -->
+                <div class="col product-card-item" data-category="swim and play">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-25%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://images.unsplash.com/photo-1786316803986-a4083668a7bc?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-100 h-100 object-fit-cover" alt="Kids Anti-Fog Mirrored Goggles"
+                                    onerror="swapProductImage(this, 'swim,goggles')">
+                            </div>
+                            <h5 class="market-product-title">Kids Anti-Fog Mirrored Goggles</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                                <span>&bull;</span>
+                                <span>1.5k sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;450</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;600</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kids Skate Helmet & Knee Guards -->
+                <div class="col product-card-item" data-category="protective gear">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-15%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://plus.unsplash.com/premium_photo-1705421623097-89d706035a82?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-100 h-100 object-fit-cover" alt="Kids Skate Helmet &amp; Knee Guards"
+                                    onerror="swapProductImage(this, 'kids,helmet,skate')">
+                            </div>
+                            <h5 class="market-product-title">Kids Skate Helmet &amp; Knee Guards</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                                <span>&bull;</span>
+                                <span>890 sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;1,250</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;1,500</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Junior Water-Resistant Daypack -->
+                <div class="col product-card-item" data-category="backpack">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-20%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://plus.unsplash.com/premium_photo-1724885408427-0cc329fd7d36?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-100 h-100 object-fit-cover" alt="Junior Water-Resistant Daypack"
+                                    onerror="swapProductImage(this, 'kids,backpack')">
+                            </div>
+                            <h5 class="market-product-title">Junior Water-Resistant Daypack</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                                <span>&bull;</span>
+                                <span>1.2k sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;990</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;1,250</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Foam Basketball Size 3 -->
+                <div class="col product-card-item" data-category="toy">
+                    <div
+                        class="card market-card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                        <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                            style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">-15%</span>
+                        <div>
+                            <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=400&q=80"
+                                    class="w-100 h-100 object-fit-cover" alt="Mini Foam Basketball Size 3"
+                                    onerror="swapProductImage(this, 'basketball,toy')">
+                            </div>
+                            <h5 class="market-product-title">Mini Foam Basketball Size 3</h5>
+                            <div class="d-flex align-items-center gap-2 small text-muted mb-2"
+                                style="font-size: 0.8rem;">
+                                <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                                <span>&bull;</span>
+                                <span>2.8k sold</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-baseline gap-2 mb-3">
+                                <span class="market-current-price fw-bold text-danger fs-5">&#8369;390</span>
+                                <span class="small text-muted text-decoration-line-through">&#8369;460</span>
+                            </div>
+                            <div class="market-actions">
+                                <button class="btn btn-market-buy" type="button">Buy Now</button>
+                                <button class="btn btn-market-cart" type="button" aria-label="Add to cart"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-center text-muted mt-4 d-none" id="emptyState">No products in this category yet.</p>
+
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-dark px-5 py-2 fw-bold" type="button">
+                    Load more kids &amp; babies items <i class="bi bi-chevron-down ms-1"></i>
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer pt-5">
+        <div class="container-fluid px-4 pb-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3"><img src="./Images/kinitiqLogo.png" alt="Kinetiq"
+                            class="img-fluid"></h5>
+                    <p class="small text-muted" style="max-width: 320px;">
+                        Technical equipment and apparel designed for accessibility, high performance, and lifetime
+                        sports journeys.
+                    </p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Departments</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="all-sports.html">All Sports</a></li>
+                        <li class="mb-2"><a href="men.html">Men's Apparel</a></li>
+                        <li class="mb-2"><a href="women.html">Women's Gear</a></li>
+                        <li class="mb-2"><a href="kids.html">Kids &amp; Babies</a></li>
+                        <li class="mb-2"><a href="accessories.html">Accessories</a></li>
+                        <li class="mb-2"><a href="travel.html">Travel</a></li>
+                        <li class="mb-0"><a href="trends.html">Sports Trend</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Track Order</a></li>
+                        <li class="mb-2"><a href="#">Warranty &amp; Repairs</a></li>
+                        <li class="mb-2"><a href="#">Returns Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6>Kinetiq Club</h6>
+                    <p class="small text-muted">Subscribe for exclusive member pricing, and fresh drops.</p>
+                    <div class="input-group newsletter-form">
+                        <input type="email" class="form-control form-control-sm px-3" placeholder="Enter your email">
+                        <button class="btn btn-sm px-3" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-secondary border-opacity-25">
+            <div class="container-fluid px-4 d-flex justify-content-between align-items-center small text-muted">
+                <span>&copy; 2026 Kinetiq Sports Retail Inc. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+
+    <script>
+        // If a product photo fails to load, try a keyword-matched Unsplash photo,
+        // then finally a plain grey placeholder so nothing ever looks broken.
+        function swapProductImage(img, keywords) {
+            if (!img.dataset.triedKeyword) {
+                img.dataset.triedKeyword = '1';
+                img.onerror = function () { swapProductImage(img, keywords); };
+                img.src = 'https://source.unsplash.com/400x400/?' + encodeURIComponent(keywords);
+                return;
+            }
+            img.onerror = null;
+            img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">' +
+                '<rect width="100%" height="100%" fill="%23e9ecef"/>' +
+                '<text x="50%" y="50%" font-family="sans-serif" font-size="16" fill="%236c757d" text-anchor="middle">Photo coming soon</text>' +
+                '</svg>'
+            );
+        }
+
+        function filterCategory(category, clickedBtn) {
+            document.querySelectorAll('.filter-pill-btn').forEach(btn => btn.classList.remove('active'));
+            if (clickedBtn) clickedBtn.classList.add('active');
+
+            let visible = 0;
+            document.querySelectorAll('.product-card-item').forEach(cardEl => {
+                const match = category === 'all' || cardEl.dataset.category === category;
+                cardEl.classList.toggle('d-none', !match);
+                if (match) visible++;
+            });
+
+            document.getElementById('emptyState').classList.toggle('d-none', visible > 0);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const filter = new URLSearchParams(location.search).get('filter');
+            if (!filter) return;
+            const btn = document.querySelector(`.filter-pill-btn[data-filter="${filter}"]`);
+            filterCategory(filter, btn);
+        });
+    </script>
+</body>
+
+</html>

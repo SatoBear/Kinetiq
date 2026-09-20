@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../Images/kinitiqLogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Luggage | Kinetiq</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Top Sticky Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-dark top-navbar py-3">
+            <div class="container-fluid px-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between w-100 navbar-row">
+
+                    <!-- Brand / Logo -->
+                    <a class="navbar-brand fw-bold fs-3" href="kinetiq.html">
+                        <img src="./Images/kinitiqLogo.png" alt="Kinetiq home" class="img-fluid">
+                    </a>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar-container order-3 order-lg-2 flex-grow-1 mx-auto my-2 my-lg-0">
+                        <div class="input-group search-wrapper overflow-hidden">
+                            <span class="input-group-text bg-transparent border-0 ps-3 pe-auto">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control py-2 ps-1 pe-3 bg-transparent border-0"
+                                placeholder="Search for Anything.." aria-label="Search">
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="d-flex align-items-center order-2 order-lg-3">
+                        <a href="#" class="icon-btn position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span>My Cart</span>
+                            <span class="cart-count">2</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Secondary Navbar -->
+        <div class="secondary-nav bg-white border-bottom shadow-sm">
+            <div class="container-fluid px-4">
+                <ul class="nav align-items-center justify-content-between mb-0 list-unstyled w-100 flex-nowrap">
+
+                    <!-- 1. All Sports -->
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-dark fw-semibold px-2 text-nowrap" href="all-sports.html">All Sports</a>
+                    </li>
+
+                    <!-- 2. Men -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="men.html"
+                            id="menMenuLink">Men</a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Apparel &amp; Shoes</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="men.html?category=shoes"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Shoes</a></li>
+                                <li class="mb-2"><a href="men.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">T-Shirts &amp; Tops</a>
+                                </li>
+                                <li class="mb-2"><a href="men.html?category=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Shorts &amp; Bottoms</a>
+                                </li>
+                                <li class="mb-0"><a href="men.html?category=jackets"
+                                        class="text-decoration-none text-secondary text-nowrap">Jackets &amp;
+                                        Windbreakers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. Women -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="women.html"
+                            id="womenMenuLink">Women</a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Clothing</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="women.html?category=bras"
+                                        class="text-decoration-none text-secondary text-nowrap">Sports Bras</a></li>
+                                <li class="mb-2"><a href="women.html?category=leggings"
+                                        class="text-decoration-none text-secondary text-nowrap">Leggings</a></li>
+                                <li class="mb-0"><a href="women.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">Tops</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. Kids and Babies -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="shop.html"
+                            id="nav-kids">
+                            Kids and Babies
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Junior Activewear</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="shop.html?filter=footwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Kids Running Shoes</a>
+                                </li>
+                                <li class="mb-2"><a href="shop.html?filter=apparel"
+                                        class="text-decoration-none text-secondary text-nowrap">Tees &amp; Active
+                                        Shorts</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=swim"
+                                        class="text-decoration-none text-secondary text-nowrap">Swimsuits &amp;
+                                        Goggles</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=protective"
+                                        class="text-decoration-none text-secondary text-nowrap">Helmets &amp; Protective
+                                        Pads</a></li>
+                                <li class="mb-0"><a href="shop.html"
+                                        class="text-decoration-none text-secondary text-nowrap">Junior Backpacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 5. Sport Accessories -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="accessories.html" id="nav-accessories">
+                            Sport Accessories
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Hardware &amp; Extras</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="accessories.html?filter=hydration"
+                                        class="text-decoration-none text-secondary text-nowrap">Water Bottles &amp;
+                                        Flasks</a></li>
+                                <li class="mb-2"><a href="accessories.html?filter=recovery"
+                                        class="text-decoration-none text-secondary text-nowrap">Massage &amp; Foam
+                                        Rollers</a></li>
+                                <li class="mb-2"><a href="accessories.html?filter=wraps"
+                                        class="text-decoration-none text-secondary text-nowrap">Compression Sleeves</a>
+                                </li>
+                                <li class="mb-0"><a href="accessories.html?filter=bags"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Belts &amp;
+                                        Pouches</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 6. Travel (Active Tab) -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold px-2 text-nowrap"
+                            style="color: var(--petrol-deep) !important; border-bottom: 2px solid var(--petrol-deep);"
+                            href="travel.html" id="nav-travel">
+                            Travel
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Luggage &amp; Packs</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#filter-duffels"
+                                        onclick="filterCategory('duffels', document.getElementById('pill-duffels'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Duffel
+                                        Bags</a></li>
+                                <li class="mb-2"><a href="#filter-backpacks"
+                                        onclick="filterCategory('backpacks', document.getElementById('pill-backpacks'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Hiking Daypacks</a></li>
+                                <li class="mb-2"><a href="#filter-organizers"
+                                        onclick="filterCategory('organizers', document.getElementById('pill-organizers'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Travel Toiletry Kits</a>
+                                </li>
+                                <li class="mb-2"><a href="#filter-organizers"
+                                        onclick="filterCategory('organizers', document.getElementById('pill-organizers'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Ventilated Shoe Bags</a>
+                                </li>
+                                <li class="mb-0"><a href="#filter-waterproof"
+                                        onclick="filterCategory('waterproof', document.getElementById('pill-waterproof'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Roll-Top Dry Sacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 7. Sports Trend -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="trends.html"
+                            id="nav-trends">
+                            Sports Trend
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Street &amp; Seasonal</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="trends.html?filter=sneakers"
+                                        class="text-decoration-none text-secondary text-nowrap">Court Retro Sneakers</a>
+                                </li>
+                                <li class="mb-2"><a href="trends.html?filter=outerwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Boxy Heavyweight
+                                        Hoodies</a></li>
+                                <li class="mb-2"><a href="trends.html?filter=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Cargo Utility Track
+                                        Pants</a></li>
+                                <li class="mb-0"><a href="trends.html?filter=headwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Bucket
+                                        Hats</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-danger fw-bold px-2 text-nowrap" href="kinetiq.html#flash-deals">Best
+                            Deals</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Petrol Hero Banner -->
+    <section class="py-5 text-white" style="background-color: var(--petrol-deep);">
+        <div class="container-fluid px-4">
+            <span class="badge text-uppercase fw-bold px-3 py-2 rounded-2 mb-3"
+                style="background-color: #ffc107; color: #111; font-size: 0.72rem; letter-spacing: 0.5px;">
+                ADVENTURE READY
+            </span>
+            <h1 class="fw-bold fs-2 text-uppercase mb-2 text-white" style="letter-spacing: -0.5px;">
+                TRAVEL &amp; OUTDOOR BAGS
+            </h1>
+            <p class="text-white-50 mb-0" style="max-width: 650px; font-size: 0.95rem;">
+                Weatherproof duffels, modular packing cubes, and heavy-duty gear built for sporting trips.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Control Card -->
+    <section class="container-fluid px-4 my-4">
+        <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+
+                <!-- Pill Filter Buttons -->
+                <div class="d-flex align-items-center gap-2 overflow-x-auto flex-nowrap py-1"
+                    style="scrollbar-width: none;">
+                    <button class="filter-pill-btn active text-nowrap" id="pill-all"
+                        onclick="filterCategory('all', this)">All Travel</button>
+                    <button class="filter-pill-btn text-nowrap" id="pill-duffels"
+                        onclick="filterCategory('duffels', this)"><i class="bi bi-tag me-1"></i> Duffel Bags</button>
+                    <button class="filter-pill-btn text-nowrap" id="pill-backpacks"
+                        onclick="filterCategory('backpacks', this)"><i class="bi bi-tag me-1"></i> Backpacks</button>
+                    <button class="filter-pill-btn text-nowrap" id="pill-organizers"
+                        onclick="filterCategory('organizers', this)"><i class="bi bi-tag me-1"></i> Organizers</button>
+                    <button class="filter-pill-btn text-nowrap" id="pill-waterproof"
+                        onclick="filterCategory('waterproof', this)"><i class="bi bi-tag me-1"></i> Waterproof
+                        Packs</button>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="dropdown">
+                    <button id="sortBtn" class="btn btn-sm btn-outline-secondary dropdown-toggle fw-semibold"
+                        type="button" data-bs-toggle="dropdown">Sort by: Popular</button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item active" href="#" data-sort="popular">Popular</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="latest">Latest</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="low">Price: Low to High</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="high">Price: High to Low</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Products Grid -->
+    <main class="container-fluid px-4 pb-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3" id="catalogProductGrid">
+
+            <!-- Card 1: Duffels -->
+            <div class="col product-card-item" data-category="duffels">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -23%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://www.lifeunplugged.com/cdn/shop/files/shoperator-771-1776718690148.jpg?v=1776790452&width=1080"
+                                class="w-100 h-100 object-fit-cover" alt="Expedition Weatherproof Duffel 60L"
+                                onerror="this.onerror=null;this.src='https://www.lifeunplugged.com/cdn/shop/files/shoperator-771-1776718690148.jpg?v=1776790452&width=1080';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate" title="Expedition Weatherproof Duffel 60L">
+                            Expedition Duffel 60L
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                            <span>&bull;</span>
+                            <span>1.8k sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱2,450</span>
+                            <span class="small text-muted text-decoration-line-through">₱3,200</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Backpacks -->
+            <div class="col product-card-item" data-category="backpacks">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -25%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://thetravelclub.ph/cdn/shop/files/73506.jpg?v=1714112524&width=2800"
+                                class="w-100 h-100 object-fit-cover" alt="Ultralight Mountain Packable Pack 20L"
+                                onerror="this.onerror=null;this.src='https://thetravelclub.ph/cdn/shop/files/73506.jpg?v=1714112524&width=2800';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate"
+                            title="Ultralight Mountain Packable Pack 20L">
+                            Packable Daypack 20L
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                            <span>&bull;</span>
+                            <span>2.3k sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱1,190</span>
+                            <span class="small text-muted text-decoration-line-through">₱1,600</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Organizers -->
+            <div class="col product-card-item" data-category="organizers">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -26%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://rox.com.ph/cdn/shop/files/1000497964_03.jpg?v=1721699153&width=1080"
+                                class="w-100 h-100 object-fit-cover" alt="Hanging Water-Resistant Toiletry Kit"
+                                onerror="this.onerror=null;this.src='https://rox.com.ph/cdn/shop/files/1000497964_03.jpg?v=1721699153&width=1080';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate"
+                            title="Hanging Water-Resistant Toiletry Kit">
+                            Hanging Toiletry Kit
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                            <span>&bull;</span>
+                            <span>980 sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱550</span>
+                            <span class="small text-muted text-decoration-line-through">₱750</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Organizers -->
+            <div class="col product-card-item" data-category="organizers">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -30%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://underarmour.scene7.com/is/image/Underarmour/1381921-001_SHPKT_SL?rp=standard-0pad|pdp&qlt=85&bgc=f0f0f0&wid=800&hei=1000&op_usm=1.75,0.3,2,0"
+                                class="w-100 h-100 object-fit-cover" alt="Ventilated Wet/Dry Shoe Bag"
+                                onerror="this.onerror=null;this.src='https://underarmour.scene7.com/is/image/Underarmour/1381921-001_SHPKT_SL?rp=standard-0pad|pdp&qlt=85&bgc=f0f0f0&wid=800&hei=1000&op_usm=1.75,0.3,2,0';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate" title="Ventilated Wet/Dry Shoe Bag">
+                            Ventilated Shoe Bag
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                            <span>&bull;</span>
+                            <span>1.4k sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱420</span>
+                            <span class="small text-muted text-decoration-line-through">₱600</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Waterproof Packs -->
+            <div class="col product-card-item" data-category="waterproof">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -26%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://m.media-amazon.com/images/I/41Mr24dDifL._AC_UY1100_.jpg"
+                                class="w-100 h-100 object-fit-cover" alt="All-Weather Roll-Top Dry Sack 25L"
+                                onerror="this.onerror=null;this.src='https://m.media-amazon.com/images/I/41Mr24dDifL._AC_UY1100_.jpg';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate" title="All-Weather Roll-Top Dry Sack 25L">
+                            Roll-Top Dry Sack 25L
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                            <span>&bull;</span>
+                            <span>1.1k sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱590</span>
+                            <span class="small text-muted text-decoration-line-through">₱800</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Backpacks -->
+            <div class="col product-card-item" data-category="backpacks">
+                <div
+                    class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-3 d-flex flex-column justify-content-between position-relative">
+                    <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1 rounded-2 text-white fw-bold"
+                        style="background-color: #dc3545; font-size: 0.75rem; z-index: 2;">
+                        -25%
+                    </span>
+                    <div>
+                        <div class="rounded-3 overflow-hidden mb-3 bg-light" style="height: 180px;">
+                            <img src="https://cld.accentuate.io/40297053683808/1708708735185/4-AER39017_techsling3_xpac_back.jpg?v=1708708735185&options=w_1728"
+                                class="w-100 h-100 object-fit-cover" alt="Crossbody Tech Utility Sling"
+                                onerror="this.onerror=null;this.src='https://cld.accentuate.io/40297053683808/1708708735185/4-AER39017_techsling3_xpac_back.jpg?v=1708708735185&options=w_1728';">
+                        </div>
+                        <h5 class="market-product-title mb-1 text-truncate" title="Crossbody Tech Utility Sling">
+                            Crossbody Tech Sling
+                        </h5>
+                        <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.8rem;">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                            <span>&bull;</span>
+                            <span>870 sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fw-bold text-danger fs-5">₱890</span>
+                            <span class="small text-muted text-decoration-line-through">₱1,200</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm text-white fw-bold flex-grow-1"
+                                style="background-color: var(--petrol-deep);" type="button">
+                                BUY NOW
+                            </button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-dark px-5 py-2 fw-bold" type="button">
+                Load More Travel Bags <i class="bi bi-chevron-down ms-1"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer pt-5">
+        <div class="container-fluid px-4 pb-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3"><img src="./Images/kinitiqLogo.png" alt="kinetiq"
+                            class="img-fluid">
+                    </h5>
+                    <p class="small text-muted" style="max-width: 320px;">
+                        Technical equipment and apparel designed for accessibility, high performance, and lifetime
+                        sports journeys.
+                    </p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Departments</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="all-sports.html">All Sports</a></li>
+                        <li class="mb-2"><a href="men.html">Men's Apparel</a></li>
+                        <li class="mb-2"><a href="women.html">Women's Gear</a></li>
+                        <li class="mb-2"><a href="travel.html">Travel</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Track Order</a></li>
+                        <li class="mb-2"><a href="#">Warranty &amp; Repairs</a></li>
+                        <li class="mb-2"><a href="#">Returns Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6>Kinetiq Club</h6>
+                    <p class="small text-muted">Subscribe for exclusive member pricing, and fresh drops.</p>
+                    <div class="input-group newsletter-form">
+                        <input type="email" class="form-control form-control-sm px-3" placeholder="Enter your email">
+                        <button class="btn btn-sm px-3" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-secondary border-opacity-25">
+            <div class="container-fluid px-4 d-flex justify-content-between align-items-center small text-muted">
+                <span>&copy; 2026 Kinetiq Sports Retail Inc. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+
+    <!-- Category Filter Script -->
+    <script>
+        function filterCategory(category, clickedBtn) {
+            document.querySelectorAll('.filter-pill-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
+            }
+
+            const cards = document.querySelectorAll('.product-card-item');
+            cards.forEach(card => {
+                const itemCategory = card.getAttribute('data-category');
+                if (category === 'all' || itemCategory === category) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

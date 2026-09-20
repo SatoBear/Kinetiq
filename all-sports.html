@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../Images/kinitiqLogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Sports | Kinetiq</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Top Sticky Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-dark top-navbar py-3">
+            <div class="container-fluid px-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-between w-100 navbar-row">
+
+                    <!-- Brand / Logo (Left) -->
+                    <a class="navbar-brand fw-bold fs-3" href="kinetiq.html">
+                        <img src="./Images/kinitiqLogo.png" alt="Kinetiq home" class="img-fluid">
+                    </a>
+
+                    <!-- Search Bar (Centered) -->
+                    <div class="search-bar-container order-3 order-lg-2 flex-grow-1 mx-auto my-2 my-lg-0">
+                        <div class="input-group search-wrapper overflow-hidden">
+                            <span class="input-group-text bg-transparent border-0 ps-3 pe-auto">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control py-2 ps-1 pe-3 bg-transparent border-0"
+                                placeholder="Search for Anything.." aria-label="Search">
+                        </div>
+                    </div>
+
+                    <!-- Cart (Right) -->
+                    <div class="d-flex align-items-center order-2 order-lg-3">
+                        <a href="#" class="icon-btn position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span>My Cart</span>
+                            <span class="cart-count">2</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Secondary Navbar -->
+        <div class="secondary-nav bg-white border-bottom shadow-sm">
+            <div class="container-fluid px-4">
+                <ul class="nav align-items-center justify-content-between mb-0 list-unstyled w-100 flex-nowrap">
+
+                    <!-- 1. All Sports (Active) -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold px-2" href="all-sports.html"
+                            id="allSportsMenuLink" style="color: var(--petrol-deep) !important;">
+                            All Sports
+                        </a>
+                        <div class="dropdown-menu sports-mega-menu p-4 shadow-lg border-0">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Outdoor Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Hiking & Trekking')"
+                                                class="text-decoration-none text-secondary">Hiking and Trekking</a></li>
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Camping & Shelters')"
+                                                class="text-decoration-none text-secondary">Camping</a></li>
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Winter Sports')"
+                                                class="text-decoration-none text-secondary">Winter Sports</a></li>
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Road & City Bikes')"
+                                                class="text-decoration-none text-secondary">Cycling</a></li>
+                                        <li class="mb-0"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Roller & Inline Skates')"
+                                                class="text-decoration-none text-secondary">Skating</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Racket Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Tennis Rackets & Balls')"
+                                                class="text-decoration-none text-secondary">Tennis</a></li>
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Badminton Sets')"
+                                                class="text-decoration-none text-secondary">Badminton</a></li>
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Pickleball Paddles')"
+                                                class="text-decoration-none text-secondary">Pickle Ball</a></li>
+                                        <li class="mb-0"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Table Tennis Blades')"
+                                                class="text-decoration-none text-secondary">Table Tennis</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="fw-bold mb-3 text-dark">Swimming Sports</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><a href="javascript:void(0)"
+                                                onclick="openSportModal('Swimwear & Jammers')"
+                                                class="text-decoration-none text-secondary">Swimwear</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 2. Men -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2" href="men.html" id="menMenuLink">
+                            Men
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Apparel &amp; Shoes</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="men.html?category=shoes"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Shoes</a></li>
+                                <li class="mb-2"><a href="men.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">T-Shirts &amp; Tops</a>
+                                </li>
+                                <li class="mb-2"><a href="men.html?category=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Shorts &amp; Bottoms</a>
+                                </li>
+                                <li class="mb-0"><a href="men.html?category=jackets"
+                                        class="text-decoration-none text-secondary text-nowrap">Jackets &amp;
+                                        Windbreakers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. Women -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2" href="women.html"
+                            id="womenMenuLink">
+                            Women
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 200px;">
+                            <h6 class="fw-bold mb-3 text-dark">Clothing</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="women.html?category=bras"
+                                        class="text-decoration-none text-secondary text-nowrap">Sports Bras</a></li>
+                                <li class="mb-2"><a href="women.html?category=leggings"
+                                        class="text-decoration-none text-secondary text-nowrap">Leggings</a></li>
+                                <li class="mb-0"><a href="women.html?category=tops"
+                                        class="text-decoration-none text-secondary text-nowrap">Tops</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. Kids and Babies (Dropdown) -->
+                    <!-- 4. Kids and Babies -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="shop.html"
+                            id="nav-kids">
+                            Kids and Babies
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Junior Activewear</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="shop.html?filter=footwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Kids Running Shoes</a>
+                                </li>
+                                <li class="mb-2"><a href="shop.html?filter=apparel"
+                                        class="text-decoration-none text-secondary text-nowrap">Tees &amp; Active
+                                        Shorts</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=swim"
+                                        class="text-decoration-none text-secondary text-nowrap">Swimsuits &amp;
+                                        Goggles</a></li>
+                                <li class="mb-2"><a href="shop.html?filter=protective"
+                                        class="text-decoration-none text-secondary text-nowrap">Helmets &amp; Protective
+                                        Pads</a></li>
+                                <li class="mb-0"><a href="shop.html"
+                                        class="text-decoration-none text-secondary text-nowrap">Junior Backpacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 5. Sport Accessories (Active State) -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap"
+                            href="accessories.html" id="nav-accessories">
+                            Sport Accessories
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Hardware &amp; Extras</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#filter-hydration"
+                                        onclick="filterCategory('hydration', document.getElementById('pill-hydration'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Water Bottles &amp;
+                                        Flasks</a></li>
+                                <li class="mb-2"><a href="#filter-recovery"
+                                        onclick="filterCategory('recovery', document.getElementById('pill-recovery'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Massage &amp; Foam
+                                        Rollers</a></li>
+                                <li class="mb-2"><a href="#filter-wraps"
+                                        onclick="filterCategory('wraps', document.getElementById('pill-wraps'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Compression Sleeves</a>
+                                </li>
+                                <li class="mb-2"><a href="#filter-wraps"
+                                        onclick="filterCategory('wraps', document.getElementById('pill-wraps'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Athletic Tape</a></li>
+                                <li class="mb-0"><a href="#filter-bags"
+                                        onclick="filterCategory('bags', document.getElementById('pill-bags'))"
+                                        class="text-decoration-none text-secondary text-nowrap">Running Belts &amp;
+                                        Pouches</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 6. Travel -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="travel.html"
+                            id="nav-travel">
+                            Travel
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Luggage &amp; Packs</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="travel.html?filter=duffel"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Duffel
+                                        Bags</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=backpacks"
+                                        class="text-decoration-none text-secondary text-nowrap">Hiking Daypacks</a></li>
+                                <li class="mb-2"><a href="travel.html?filter=organizers"
+                                        class="text-decoration-none text-secondary text-nowrap">Travel Toiletry Kits</a>
+                                </li>
+                                <li class="mb-0"><a href="travel.html?filter=packs"
+                                        class="text-decoration-none text-secondary text-nowrap">Roll-Top Dry Sacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 7. Sports Trend -->
+                    <li class="nav-item py-2 dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold px-2 text-nowrap" href="trends.html"
+                            id="nav-trends">
+                            Sports Trend
+                        </a>
+                        <div class="dropdown-menu p-3 shadow-sm border-0" style="min-width: 220px;">
+                            <h6 class="fw-bold mb-3 text-dark">Street &amp; Seasonal</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="trends.html?filter=sneakers"
+                                        class="text-decoration-none text-secondary text-nowrap">Court Retro Sneakers</a>
+                                </li>
+                                <li class="mb-2"><a href="trends.html?filter=outerwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Boxy Heavyweight
+                                        Hoodies</a></li>
+                                <li class="mb-2"><a href="trends.html?filter=bottoms"
+                                        class="text-decoration-none text-secondary text-nowrap">Cargo Utility Track
+                                        Pants</a></li>
+                                <li class="mb-0"><a href="trends.html?filter=headwear"
+                                        class="text-decoration-none text-secondary text-nowrap">Waterproof Bucket
+                                        Hats</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 8. Best Deals -->
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-danger fw-bold px-2 text-nowrap" href="kinetiq.html#flash-deals">Best
+                            Deals</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs & Header Banner -->
+    <section class="bg-white border-bottom py-4">
+        <div class="container-fluid px-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2 small">
+                    <li class="breadcrumb-item"><a href="kinetiq.html" class="text-decoration-none"
+                            style="color: var(--petrol);">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All Sports</li>
+                </ol>
+            </nav>
+            <h2 class="fw-bold m-0" style="color: var(--petrol-deep);">Explore All Sports</h2>
+            <p class="text-muted small mt-1 mb-0">Browse our complete collection of gear, apparel, and equipment across
+                every discipline.</p>
+        </div>
+    </section>
+
+    <!-- Sports Hub Grid -->
+    <main class="container-fluid px-4 py-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <!-- 1. Outdoor & Nature -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-compass"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Outdoor &amp; Nature</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Hiking & Trekking')">Hiking &amp;
+                                Trekking</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Camping & Shelters')">Camping &amp;
+                                Shelters</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Trail Running')">Trail Running</a>
+                        </li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Mountaineering')">Mountaineering</a>
+                        </li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Climbing Equipment')">Climbing
+                                Equipment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Racket Sports -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-circle"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Racket Sports</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Tennis Rackets & Balls')">Tennis
+                                Rackets &amp; Balls</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Badminton Sets')">Badminton Sets</a>
+                        </li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Pickleball Paddles')">Pickleball
+                                Paddles</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Table Tennis Blades')">Table Tennis
+                                Blades</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Squash Equipment')">Squash
+                                Equipment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Water Sports -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-tsunami"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Water Sports</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Swimwear & Jammers')">Swimwear &amp;
+                                Jammers</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Goggles & Caps')">Goggles &amp;
+                                Caps</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Snorkeling & Diving')">Snorkeling
+                                &amp; Diving</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Kayaking & Stand-up Paddle')">Kayaking
+                                &amp; Stand-up Paddle</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Surfing Gear')">Surfing Gear</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Cycling & Mobility -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-bicycle"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Cycling &amp; Mobility</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Road & City Bikes')">Road &amp; City
+                                Bikes</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Mountain Bikes (MTB)')">Mountain Bikes
+                                (MTB)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Helmets & Protection')">Helmets &amp;
+                                Protection</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Bike Repair & Accessories')">Bike
+                                Repair &amp; Accessories</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Roller & Inline Skates')">Roller &amp;
+                                Inline Skates</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. Fitness & Training -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Fitness &amp; Training</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Weight Training & Dumbbells')">Weight
+                                Training &amp; Dumbbells</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Cardio Machines & Jump Ropes')">Cardio
+                                Machines &amp; Jump Ropes</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Yoga & Pilates Mats')">Yoga &amp;
+                                Pilates Mats</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Cross-Training Gear')">Cross-Training
+                                Gear</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Recovery & Massage Rollers')">Recovery
+                                &amp; Massage Rollers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 6. Team Sports -->
+            <div class="col">
+                <div class="sport-category-card">
+                    <div class="sport-card-header">
+                        <div class="sport-icon-circle">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <h5 class="fw-bold m-0" style="color: var(--petrol-deep);">Team Sports</h5>
+                    </div>
+                    <ul class="list-unstyled sport-link-list mb-0">
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Basketball Gear & Shoes')">Basketball
+                                Gear &amp; Shoes</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Football / Soccer Cleats')">Football /
+                                Soccer Cleats</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Volleyball Equipment')">Volleyball
+                                Equipment</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSportModal('Running Club Essentials')">Running
+                                Club Essentials</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Reusable Quick-View Sport Modal (Showcase Only) -->
+    <div class="modal fade" id="sportModal" tabindex="-1" aria-labelledby="sportModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <div class="modal-header text-white" style="background-color: var(--petrol-deep);">
+                    <h5 class="modal-title fw-bold" id="sportModalTitle">Sport Category</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4 bg-light">
+                    <p class="text-muted small mb-3" id="sportModalDesc">Showing available equipment and essentials.</p>
+
+                    <!-- Dynamic Items Container -->
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="modalProductGrid">
+                        <!-- Populated via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="modal-footer bg-white border-0 d-flex justify-content-between">
+                    <span class="text-muted small"><i class="bi bi-shield-check text-success"></i> 2-Year Warranty on
+                        Hardware</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer pt-5">
+        <div class="container-fluid px-4 pb-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3"><img src="./Images/kinitiqLogo.png" alt="kinetiq"
+                            class="img-fluid">
+                    </h5>
+                    <p class="small text-muted" style="max-width: 320px;">
+                        Technical equipment and apparel designed for accessibility, high performance, and lifetime
+                        sports journeys.
+                    </p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Departments</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="all-sports.html">All Sports</a></li>
+                        <li class="mb-2"><a href="men.html">Men's Apparel</a></li>
+                        <li class="mb-2"><a href="women.html">Women's Gear</a></li>
+                        <li class="mb-2"><a href="#">Footwear</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Track Order</a></li>
+                        <li class="mb-2"><a href="#">Warranty &amp; Repairs</a></li>
+                        <li class="mb-2"><a href="#">Returns Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6>Kinetiq Club</h6>
+                    <p class="small text-muted">Subscribe for exclusive member pricing, and fresh drops.</p>
+                    <div class="input-group newsletter-form">
+                        <input type="email" class="form-control form-control-sm px-3" placeholder="Enter your email">
+                        <button class="btn btn-sm px-3" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-secondary border-opacity-25">
+            <div class="container-fluid px-4 d-flex justify-content-between align-items-center small text-muted">
+                <span>&copy; 2026 Kinetiq Sports Retail Inc. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+
+    <!-- Modal Catalog Controller -->
+    <script>
+        const sportCatalog = {
+            // 1. OUTDOOR & NATURE
+            "Hiking & Trekking": [
+                { name: "Ultralight Carbon Trekking Poles", price: "₱1,450", img: "https://images.unsplash.com/photo-1610916150455-05fc7918c825?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "40L Weatherproof Mountain Pack", price: "₱2,890", img: "https://plus.unsplash.com/premium_photo-1780491447079-a9db581e9ee4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "All-Terrain Waterproof Hiking Boots", price: "₱3,450", img: "https://plus.unsplash.com/premium_photo-1663127197495-e5973d6fe7c8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Camping & Shelters": [
+                { name: "3-Person Geodesic Dome Tent", price: "₱3,490", img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=400&q=80" },
+                { name: "Ultralight Mummy Sleeping Bag", price: "₱1,850", img: "https://images.unsplash.com/photo-1518388389348-b60e09ab7627?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Portable Gas Camp Stove & Burner", price: "₱890", img: "https://plus.unsplash.com/premium_photo-1682069522978-201c7fd0da8a?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Trail Running": [
+                { name: "Grippy Trail Running Shoes", price: "₱3,290", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=400&q=80" },
+                { name: "Hydration Running Vest (5L)", price: "₱1,650", img: "https://images.unsplash.com/photo-1544444927-9057b43e75cc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Breathable Trail Crew Socks (3pk)", price: "₱380", img: "https://images.unsplash.com/photo-1733744236286-0e44266dfcca?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Mountaineering": [
+                { name: "Alpine Climbing Harness", price: "₱2,450", img: "https://plus.unsplash.com/premium_photo-1675461588783-73423bc2f4d2?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Locking Carabiner Set (4-Pack)", price: "₱1,120", img: "https://plus.unsplash.com/premium_photo-1753789245137-1f8b165effd1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "High-Altitude Hard Shell Parka", price: "₱4,850", img: "https://plus.unsplash.com/premium_photo-1765304738892-a65badbc61a1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Climbing Equipment": [
+                { name: "Pro Grip Climbing Shoes", price: "₱3,690", img: "https://media.istockphoto.com/id/2259430072/photo/close-up-shot-of-a-climbing-shoe-used-for-indoor-and-outdoor-rock-climbing-specialized.jpg?s=1024x1024&w=is&k=20&c=tMwFzbZJIYS3pvLqG_YblV9QiaFrm2l49yVLY7f3zpU=" },
+                { name: "Refillable Chalk Bag & Belt", price: "₱490", img: "https://images.unsplash.com/photo-1639745154480-3063f381088c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Dynamic 9.8mm Climbing Rope (60m)", price: "₱5,200", img: "https://images.unsplash.com/photo-1586685256769-4e869a64f1eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+
+            // 2. RACKET SPORTS
+            "Tennis Rackets & Balls": [
+                { name: "Pro Tour Graphite Racket 300g", price: "₱3,850", img: "https://media.istockphoto.com/id/1251499195/photo/racket.jpg?s=1024x1024&w=is&k=20&c=-BaIJJtGlkkFEIySmnXKW99XeAod6KxCfkfi_PdK6-o=" },
+                { name: "Championship Felt Balls (4-Pack)", price: "₱420", img: "https://plus.unsplash.com/premium_photo-1679657300719-3441b210028d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Ergonomic Overgrip Tape (3pk)", price: "₱290", img: "https://images.unsplash.com/photo-1623562658671-6dd7644bbaa6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Badminton Sets": [
+                { name: "Carbon Fiber Badminton Racket", price: "₱1,650", img: "https://images.unsplash.com/photo-1633313236093-beebdd1a5e80?q=80&w=779&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Goose Feather Shuttlecocks (12pk)", price: "₱580", img: "https://media.istockphoto.com/id/503554594/photo/shuttlecock-for-badminton-game.jpg?s=1024x1024&w=is&k=20&c=ILBq9b9CZnjV41rN9-C2g0KcVgE6Ly8zzL7VCOJFRVA=" },
+                { name: "Portable Badminton Net Stand", price: "₱1,890", img: "https://images.unsplash.com/photo-1774632970201-9ec69e7bc0e7?q=80&w=1136&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Pickleball Paddles": [
+                { name: "Fiberglass Surface Pickleball Paddle", price: "₱2,100", img: "https://plus.unsplash.com/premium_photo-1709048991290-1d36455a2895?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RmliZXJnbGFzcyUyMFN1cmZhY2UlMjBQaWNrbGViYWxsJTIwUGFkZGxlfGVufDB8fDB8fHww" },
+                { name: "Outdoor 40-Hole Pickleballs (6pk)", price: "₱450", img: "https://plus.unsplash.com/premium_photo-1709932754755-86b9e44f39d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T3V0ZG9vciUyMDQwLUhvbGUlMjBQaWNrbGViYWxsfGVufDB8fDB8fHww" },
+                { name: "Pickleball Shoulder Sling Bag", price: "₱950", img: "https://images.unsplash.com/photo-1737476988230-032561da3ffa?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Table Tennis Blades": [
+                { name: "5-Ply Wood Table Tennis Blade", price: "₱1,250", img: "https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=400&q=80" },
+                { name: "3-Star 40+ Seamless Ping Pong Balls", price: "₱280", img: "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?auto=format&fit=crop&w=400&q=80" },
+                { name: "Rubber Sheet Cleaner & Sponge", price: "₱320", img: "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=400&q=80" }
+            ],
+            "Squash Equipment": [
+                { name: "Pro Carbon Squash Racket", price: "₱2,890", img: "https://images.unsplash.com/photo-1609432638531-5ef8d0507b90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fDUlMjBQbHklMjBXb29kJTIwVGFibGUlMjBUZW5uaXMlMjBCbGFkZXxlbnwwfHwwfHx8MA%3D%3D" },
+                { name: "Double Yellow Dot Squash Balls (3pk)", price: "₱450", img: "https://media.istockphoto.com/id/1278484832/photo/huge-pile-of-colorful-balls-for-playing-and-fun.jpg?s=612x612&w=0&k=20&c=JNFtH2_uq1V6Y6zOjM87SnHCTCnofmudlBjwJyBvnyM=" },
+                { name: "Court Anti-Fog Protective Eyewear", price: "₱780", img: "https://media.istockphoto.com/id/1141015626/photo/safety-glasses-for-shooting-and-work-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=rL_qmusVtsTvUYAUbMD7mo4wO9WzALpIVFfzFJc2aDM=" }
+            ],
+
+            // 3. WATER SPORTS
+            "Swimwear & Jammers": [
+                { name: "Chlorine-Resistant Racing Jammer", price: "₱1,190", img: "https://images.unsplash.com/photo-1602750825456-d6ff387441ef?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "High-Cut Competitive One-Piece", price: "₱1,350", img: "https://media.istockphoto.com/id/2154294202/photo/happy-young-woman-with-red-hair-running-with-yellow-scarf-at-beach.webp?a=1&b=1&s=612x612&w=0&k=20&c=bNnexRaJRyR2pG9wE5uXD_lIuExvOZ-QOS0i4REcQ6M=" },
+                { name: "UV Protective Long Sleeve Rashguard", price: "₱990", img: "https://media.istockphoto.com/id/2106458818/photo/young-asian-woman-sitting-on-a-surfboard-at-the-sea-in-the-evening.webp?a=1&b=1&s=612x612&w=0&k=20&c=6LJ9hNDKTx0k2Koq9aAZ1Gp4O7u9IMAvxkRYxN8ahn8=" }
+            ],
+            "Goggles & Caps": [
+                { name: "Anti-Fog Mirrored Swim Goggles", price: "₱650", img: "https://images.unsplash.com/photo-1555836685-31706a63b6f4?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "100% Silicone Ergonomic Swim Cap", price: "₱280", img: "https://images.unsplash.com/photo-1539936448892-3e8d2a38852d?fm=jpg&q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Silicone Ear Plugs & Nose Clip Set", price: "₱190", img: "https://media.istockphoto.com/id/1343468519/photo/nose-clip-and-blue-earplugs-in-a-plastic-box-swimming-set-on-a-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=3rwPsbAvy0P4PqKUk48nixsC781FMLhQuKjkpiPn8N0=" }
+            ],
+            "Snorkeling & Diving": [
+                { name: "180° Panoramic Snorkel Mask", price: "₱1,450", img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=400&q=80" },
+                { name: "Adjustable Diving Open-Heel Fins", price: "₱2,190", img: "https://images.unsplash.com/photo-1499242015907-fd91d5d02f13?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEFkanVzdGFibGUlMjBEaXZpbmclMjBPcGVuLUhlZWwlMjBGaW5zfGVufDB8fDB8fHww" },
+                { name: "Dry-Top Breathing Tube Snorkel", price: "₱590", img: "https://plus.unsplash.com/premium_photo-1677636665165-a8bd684e9edf?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Kayaking & Stand-up Paddle": [
+                { name: "Inflatable 10'6 Stand-Up Paddleboard", price: "₱14,500", img: "https://plus.unsplash.com/premium_photo-1681883760386-62d77639384e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "Floating Dual-Blade Kayak Paddle", price: "₱1,850", img: "https://images.unsplash.com/photo-1599582013263-80b822645216?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+                { name: "High-Buoyancy Safety Life Vest", price: "₱1,200", img: "https://images.unsplash.com/photo-1732071194919-736858247dd3?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+            ],
+            "Surfing Gear": [
+                { name: "7ft Foam Soft-Top Surfboard", price: "₱9,200", img: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=400&q=80" },
+                { name: "Premium Urethane Surf Leash (6ft)", price: "₱750", img: "https://images.unsplash.com/photo-1455729552865-3658a5d39692?auto=format&fit=crop&w=400&q=80" },
+                { name: "Warm-Water Surf Traction Wax", price: "₱180", img: "https://www.podware.com.au/cdn/shop/files/Bodyboard_Wax_Softboard_Wax_Surf_Wax_Surfboard_Wax_POD_Wax__81812.1532223750.1280.1280.jpg?v=1782965428&width=1200" }
+            ],
+
+            // 4. CYCLING & MOBILITY
+            "Road & City Bikes": [
+                { name: "Aero Aluminum Gravel Road Bike", price: "₱18,500", img: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=400&q=80" },
+                { name: "Rechargeable High-Lumen Headlight", price: "₱890", img: "https://m.media-amazon.com/images/I/71DxWxvCwlL.jpg" },
+                { name: "Padded Gel Road Cycling Gloves", price: "₱450", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZaExTAQ4b8vHg7dOYrVp4LzlQrhrQmVk5Dbjs7QBGoQ&s" }
+            ],
+            "Mountain Bikes (MTB)": [
+                { name: "Dual-Suspension 29er Mountain Bike", price: "₱22,900", img: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=400&q=80" },
+                { name: "Tubeless 29x2.3 Aggressive MTB Tire", price: "₱1,450", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuaKIYIUqrQcn2pfl6NiOs8MD14Y0N_2tqf-Pff0yK-Q&s=10" },
+                { name: "Wide-Platform Mountain Bike Pedals", price: "₱920", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSbJbO0vxX1vQE1tsAFnGLx27h_J51NqyqDdFXogXVWw&s=10" }
+            ],
+            "Helmets & Protection": [
+                { name: "Aero Aerodynamic Road Bike Helmet", price: "₱1,890", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScuQHGjdZ5uYFso_yW_NDlyyUq-TJg5y4djjJFVdPLMw&s=10" },
+                { name: "Skate & Bike Knee & Elbow Guard Set", price: "₱850", img: "https://m.media-amazon.com/images/I/71RYGt7TK-L._AC_UF894,1000_QL80_.jpg" },
+                { name: "Impact-Resistant Hard Shell Helmet", price: "₱1,350", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK-iu3KdWquo8xmmHqMBDRPrhcA1WzBg_Ljrq3HJg3KJMkcxo_B5aHE6A1&s=10" }
+            ],
+            "Bike Repair & Accessories": [
+                { name: "16-in-1 Compact Bike Multi-Tool", price: "₱590", img: "https://rockbrosus.com/cdn/shop/files/ROCKBROS-16-in-1-bike-repair-tool-kit-main.jpg?v=1761294110&width=2048" },
+                { name: "High-Pressure Floor Track Pump", price: "₱890", img: "https://hilka.co.uk/media/catalog/product/cache/bfbc3bbd9deeddc29dc2a84637868c21/8/9/89506008-main-527d4d.jpg" },
+                { name: "Heavy Duty Cable Bike Lock", price: "₱420", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSanXpCIk9x6krmtAV9DWcYlYqdS1RYHzXqU24S6fla2A&s=10" }
+            ],
+            "Roller & Inline Skates": [
+                { name: "Adjustable Hard-Boot Inline Skates", price: "₱3,490", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUemq7LNPWhuTQUCGo1L9SRKYaKk_k7WxopXEC15gIcg&s=10" },
+                { name: "80mm 85A Polyurethane Wheels (4pk)", price: "₱750", img: "https://images-na.ssl-images-amazon.com/images/I/61hsPriKaVL._AC_UL495_SR435,495_.jpg" },
+                { name: "ABEC-9 Precision Speed Bearings", price: "₱490", img: "https://down-ph.img.susercontent.com/file/a81b36fc01fffa575ab0c95d29abb776" }
+            ],
+
+            // 5. FITNESS & TRAINING
+            "Weight Training & Dumbbells": [
+                { name: "Rubber Hex Dumbbell Set (Pair)", price: "₱1,950", img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=400&q=80" },
+                { name: "Cast Iron Kettlebell 16kg", price: "₱1,650", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4SulBCYpswi6360PDI1ZSesoy9SlXOXVcdgqwyZ00gQ&s=10" },
+                { name: "Adjustable Weightlifting Belt", price: "₱890", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdpzoF25r7MjIa0DsxUf12MncpftZkZA1yfCEimlmhLw&s=10" }
+            ],
+            "Cardio Machines & Jump Ropes": [
+                { name: "Speed Cable Jump Rope with Bearings", price: "₱350", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlUsmwVgkp4OiTmXWQwZZmXqqb1UB8RKNNy1bTPCwkxg&s=10" },
+                { name: "Foldable Magnetic Rowing Machine", price: "₱12,800", img: "https://assets.kogan.com/images/yopower/YOP-421300300/7-b950ce716b-b453ac3d52848c37.jpg?auto=webp&bg-color=fff&canvas=1200%2C800&dpr=1&enable=upscale&fit=bounds&height=800&quality=90&width=1200" },
+                { name: "Resistance Loop Bands (5-Strength Set)", price: "₱420", img: "https://sunnyhealthfitness.com/cdn/shop/files/sunny-health-fitness-5-level-resistance-loop-set-no.113-main_750x.jpg?v=1776876055" }
+            ],
+            "Yoga & Pilates Mats": [
+                { name: "6mm Eco-Friendly Non-Slip TPE Yoga Mat", price: "₱890", img: "https://m.media-amazon.com/images/I/51g62SO3CLL._AC_UF894,1000_QL80_.jpg" },
+                { name: "High-Density EVA Yoga Block Set", price: "₱390", img: "https://m.media-amazon.com/images/I/71ubdSQCyIL._AC_UF1000,1000_QL80_.jpg" },
+                { name: "Cotton Alignment Yoga Strap (8ft)", price: "₱220", img: "https://m.media-amazon.com/images/I/61vkrG6OO0L._AC_UF1000,1000_QL80_.jpg" }
+            ],
+            "Cross-Training Gear": [
+                { name: "Gymnastic Wooden Rings with Straps", price: "₱1,250", img: "https://www.xtenia.com/cdn/shop/files/xtenia-workout-rings-v2-jacquard-straps-closeup.webp?v=1786121993" },
+                { name: "Weighted Workout Vest 10kg", price: "₱2,200", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcXsATNshYJTOnsSQaSQG4VoVbFhOO1ddK7PvFuhTuVbir8G0ejkrL1G7&s=10" },
+                { name: "Heavy Duty Battle Ropes (30ft)", price: "₱2,450", img: "https://www.marcypro.com/cdn/shop/files/PRO-ZS01-1_p_02__24120.1688678966.1280.1280.jpg?v=1739773259&width=1445" }
+            ],
+            "Recovery & Massage Rollers": [
+                { name: "Grid Trigger Point Foam Roller", price: "₱680", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2uLEIJElUOYoTYzinb3qmjieT6-xxOUe8En4X8eJWMiXltF2BxYc1jeh6&s=10" },
+                { name: "Deep Tissue Percussion Massage Gun", price: "₱2,450", img: "https://i5.walmartimages.com/seo/Massage-Gun-Deep-Tissue-Percussion-Massager-Gun-Back-Massager-Neck-Massager-Athletes-Portable-Muscle-Massage-Gun-8-Massage-Heads-32-Speeds_45c2c02d-1ff8-42c6-bf6f-4ea5355ce16e.2d309039c203118568e18506bbd1c130.jpeg" },
+                { name: "High-Density Lacrosse Massage Ball", price: "₱190", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWI-f7x27ryo1ETkHHfwqQzRdktIvgC74ucm7V5bSFDTfTpql5M-cufc&s=10" }
+            ],
+
+            // 6. TEAM SPORTS
+            "Basketball Gear & Shoes": [
+                { name: "Indoor/Outdoor Grip Basketball Size 7", price: "₱1,150", img: "https://i5.walmartimages.com/asr/5d8cb9f0-611b-4248-a901-c283c953e795.b0d5fa8d7ef5dfa010c88a0737007fd7.jpeg" },
+                { name: "High-Traction Ankle Support Hoops Shoes", price: "₱3,990", img: "https://cdn.runrepeat.com/storage/gallery/buying_guide_primary/430/430-best-basketball-shoes-for-ankle-support-001-16264957-main.jpg" },
+                { name: "Padded Compression Knee Sleeves (Pair)", price: "₱480", img: "https://www.mcdavidusa.com/cdn/shop/products/md_6446_hex_legsleeves_blk_1000x1000_6_164a6b07-8ece-4747-aca2-0d2986e19161_2000x.png?v=1628272229" }
+            ],
+            "Football / Soccer Cleats": [
+                { name: "Firm Ground Lightweight Soccer Cleats", price: "₱3,450", img: "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=400&q=80" },
+                { name: "FIFA Quality Pro Match Soccer Ball", price: "₱1,250", img: "https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&w=400&q=80" },
+                { name: "Ergonomic Hard Shell Shin Guards", price: "₱420", img: "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=400&q=80" }
+            ],
+            "Volleyball Equipment": [
+                { name: "Official Match Soft-Touch Volleyball", price: "₱1,200", img: "https://image.made-in-china.com/2f0j00KgCqcZAUwlbO/PU-Soft-Touch-Volleyball-Brand-Size-5-Official-Match-Volleyballs-High-Quality-Indoor-Training-Volleyball-Balls.webp" },
+                { name: "Thick Gel Knee Pads for Indoor Court", price: "₱550", img: "https://www.mcdavidusa.com/cdn/shop/products/md_6446_hex_legsleeves_blk_1000x1000_6_164a6b07-8ece-4747-aca2-0d2986e19161_2000x.png?v=1628272229" },
+                { name: "Heavy-Duty Regulation Volleyball Net", price: "₱1,650", img: "https://m.media-amazon.com/images/I/71BL1Um1uiL._AC_UF1000,1000_QL80_.jpg" }
+            ],
+            "Running Club Essentials": [
+                { name: "Ultralight Breathable Running Shoes", price: "₱3,290", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROu4vZCTdWtGYyQyNcpm1HLGvYH8S8rqvKSjDDTdgFRA&s=10" },
+                { name: "Quick-Dry Moisture Wicking Singlet", price: "₱590", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdkQTB8bZJYGNnqdHD2eq0TffsNYbCZj1IPNkhk9ISYA&s=10" },
+                { name: "Reflective Running Belt & Pouch", price: "₱390", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeLX4w_q53yWl7Td0yNR9nWv8eT7jnS6bIg6PoZLgHsQ&s=10" }
+            ]
+        };
+
+        function openSportModal(sportName) {
+            const modalTitle = document.getElementById('sportModalTitle');
+            const modalDesc = document.getElementById('sportModalDesc');
+            const grid = document.getElementById('modalProductGrid');
+
+            modalTitle.textContent = sportName;
+            modalDesc.textContent = `Browse curated gear and hardware for ${sportName}.`;
+
+            // Retrieve items or fallback safely
+            const items = sportCatalog[sportName] || [
+                { name: `${sportName} Pro Gear`, price: "₱1,490", img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=400&q=80" },
+                { name: `${sportName} Training Kit`, price: "₱1,850", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=400&q=80" },
+                { name: `${sportName} Essentials Pack`, price: "₱690", img: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=400&q=80" }
+            ];
+
+            // Render cards with error handler
+            grid.innerHTML = items.map(item => `
+        <div class="col">
+            <div class="market-card">
+                <div class="market-img-box">
+                    <img src="${item.img}" 
+                         alt="${item.name}" 
+                         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=400&q=80';">
+                </div>
+                <div class="market-card-body">
+                    <div>
+                        <h5 class="market-product-title">${item.name}</h5>
+                        <div class="market-meta-row">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                            <span>1.2k sold</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="market-price-row">
+                            <span class="market-current-price">${item.price}</span>
+                        </div>
+                        <div class="market-actions">
+                            <button class="btn btn-market-buy" type="button">Buy Now</button>
+                            <button class="btn btn-market-cart" type="button" aria-label="Add to cart">
+                                <i class="bi bi-cart3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+            const modalInstance = new bootstrap.Modal(document.getElementById('sportModal'));
+            modalInstance.show();
+        }
+    </script>
+</body>
+
+</html>
